@@ -1,9 +1,7 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
 
 # sidebar category list (shown under the profile photo)
 sidebar:
   - title: "About me"
-    url: /about/
+    url: /
