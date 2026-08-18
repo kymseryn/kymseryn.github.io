@@ -12,3 +12,27 @@ search: false
   font-size: $type-size-2;
   color: $primary-color;
 }
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+  padding-inline: 1em;
+  font-size: 1rem;
+  white-space: nowrap;
+
+  &__link {
+    color: $masthead-link-color;
+    text-decoration: none;
+
+    &--active {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+
+  &__sep {
+    margin: 0 0.35em;
+    color: $masthead-link-color;
+  }
+}

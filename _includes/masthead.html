@@ -1,6 +1,23 @@
 {% assign locale = include.locale | default: site.locale %}
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
+{% assign is_en = false %}
+{% if page.url == "/en" or page.url contains "/en/" %}
+  {% assign is_en = true %}
+{% endif %}
+{% if is_en %}
+  {% assign ko_url = page.url | remove_first: "/en" %}
+  {% if ko_url == "" %}{% assign ko_url = "/" %}{% endif %}
+  {% assign en_url = page.url %}
+{% else %}
+  {% assign ko_url = page.url %}
+  {% if page.url == "/" %}
+    {% assign en_url = "/en/" %}
+  {% else %}
+    {% assign en_url = "/en" | append: page.url %}
+  {% endif %}
+{% endif %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
@@ -23,6 +40,11 @@
             </li>
           {%- endfor -%}
         </ul>
+        <div class="lang-switcher">
+          <a href="{{ ko_url | relative_url }}" class="lang-switcher__link{% unless is_en %} lang-switcher__link--active{% endunless %}">한국어</a>
+          <span class="lang-switcher__sep">/</span>
+          <a href="{{ en_url | relative_url }}" class="lang-switcher__link{% if is_en %} lang-switcher__link--active{% endif %}">Eng</a>
+        </div>
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[locale].search_label | default: "Toggle search" }}</span>
