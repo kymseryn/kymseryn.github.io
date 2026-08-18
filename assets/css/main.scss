@@ -55,3 +55,15 @@ search: false
     margin-top: 1em;
   }
 }
+
+// Always show the sidebar beside the content (never stacked above it)
+.sidebar {
+  float: inline-start !important;
+  width: calc(#{$right-sidebar-width-narrow} - 1em) !important;
+}
+
+.page {
+  float: inline-end !important;
+  width: calc(100% - #{$right-sidebar-width-narrow}) !important;
+  padding-inline-end: $right-sidebar-width-narrow !important;
+}
