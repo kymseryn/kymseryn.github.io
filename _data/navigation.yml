@@ -1,9 +1,16 @@
 # main links
 main:
 
-# sidebar category list (shown under the profile photo)
-sidebar:
+# Korean sidebar category list (shown under the profile photo)
+sidebar-ko:
   - title: "About me"
     url: /
-  - title: "Discussion Paper"
+  - title: "발제문"
     url: /discussion-papers/
+
+# English sidebar category list
+sidebar-en:
+  - title: "About me"
+    url: /en/
+  - title: "Discussion Paper"
+    url: /en/discussion-papers/

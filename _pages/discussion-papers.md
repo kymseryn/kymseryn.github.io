@@ -4,7 +4,7 @@ permalink: /discussion-papers/
 layout: single
 author_profile: true
 sidebar:
-  nav: "sidebar"
+  nav: "sidebar-ko"
 ---
 
 {% assign papers = site.discussion_papers | sort: "date" | reverse %}

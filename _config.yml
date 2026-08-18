@@ -256,7 +256,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
   - jekyll-remote-theme
 
 # mimic GitHub Pages with --safe
@@ -265,7 +264,6 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
   - jekyll-remote-theme
 
 
@@ -328,5 +326,5 @@ defaults:
       layout: single
       author_profile: true
       sidebar:
-        nav: "sidebar"
+        nav: "sidebar-ko"
 
