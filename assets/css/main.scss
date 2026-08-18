@@ -37,33 +37,37 @@ search: false
   }
 }
 
-// Always show the sidebar nav_list (no collapsed "Toggle menu" state)
-.nav__list {
-  label {
-    display: none !important;
+// Above phone widths: keep the sidebar nav_list always expanded (no
+// "Toggle menu" tap needed) and keep the sidebar beside the content
+// instead of stacked above it. Below $medium, leave the theme's
+// original mobile behavior (stacked + collapsible) alone.
+@media (min-width: #{$medium}) {
+  .nav__list {
+    label {
+      display: none !important;
+    }
+
+    input[type="checkbox"] {
+      display: none !important;
+    }
+
+    .nav__items {
+      max-height: none !important;
+      overflow: visible !important;
+      opacity: 1 !important;
+      transform: none !important;
+      margin-top: 1em;
+    }
   }
 
-  input[type="checkbox"] {
-    display: none !important;
+  .sidebar {
+    float: inline-start !important;
+    width: calc(#{$right-sidebar-width-narrow} - 1em) !important;
   }
 
-  .nav__items {
-    max-height: none !important;
-    overflow: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    margin-top: 1em;
+  .page {
+    float: inline-end !important;
+    width: calc(100% - #{$right-sidebar-width-narrow}) !important;
+    padding-inline-end: $right-sidebar-width-narrow !important;
   }
-}
-
-// Always show the sidebar beside the content (never stacked above it)
-.sidebar {
-  float: inline-start !important;
-  width: calc(#{$right-sidebar-width-narrow} - 1em) !important;
-}
-
-.page {
-  float: inline-end !important;
-  width: calc(100% - #{$right-sidebar-width-narrow}) !important;
-  padding-inline-end: $right-sidebar-width-narrow !important;
 }
