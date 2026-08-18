@@ -24,11 +24,11 @@ search: false
   &__link {
     color: $masthead-link-color;
     text-decoration: none;
+  }
 
-    &--active {
-      color: $primary-color;
-      font-weight: bold;
-    }
+  a.lang-switcher__link--active {
+    color: $primary-color;
+    font-weight: bold;
   }
 
   &__sep {
