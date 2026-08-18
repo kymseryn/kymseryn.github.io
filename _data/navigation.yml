@@ -5,3 +5,5 @@ main:
 sidebar:
   - title: "About me"
     url: /
+  - title: "Discussion Paper"
+    url: /discussion-papers/

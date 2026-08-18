@@ -217,6 +217,13 @@ permalink: /:categories/:title/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
+# Collections
+collections:
+  discussion_papers:
+    output: true
+    permalink: /discussion-papers/:path/
+
+
 # Pagination with jekyll-paginate
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
@@ -313,4 +320,13 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _discussion_papers
+  - scope:
+      path: ""
+      type: discussion_papers
+    values:
+      layout: single
+      author_profile: true
+      sidebar:
+        nav: "sidebar"
 
