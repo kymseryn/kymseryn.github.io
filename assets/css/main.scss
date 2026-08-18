@@ -73,6 +73,8 @@ search: false
 }
 
 // Highlight the currently active sidebar menu item
-.nav__items .active {
-  color: $primary-color;
+// (scoped under .nav__list to outrank .nav__list .nav__items a{color:inherit})
+.nav__list .nav__items .active {
+  color: $primary-color !important;
+  font-weight: bold;
 }
