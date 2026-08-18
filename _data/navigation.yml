@@ -3,10 +3,22 @@ main:
 
 # Korean sidebar category list (shown under the profile photo)
 sidebar-ko:
-  - title: "About me"
+  - title: "소개"
     url: /
+  - title: "연구"
+    url: /research/
+  - title: "발표"
+    url: /presentation/
+  - title: "CV"
+    url: /cv/
 
 # English sidebar category list
 sidebar-en:
   - title: "About me"
     url: /en/
+  - title: "Research"
+    url: /en/research/
+  - title: "Presentation"
+    url: /en/presentation/
+  - title: "CV"
+    url: /en/cv/
