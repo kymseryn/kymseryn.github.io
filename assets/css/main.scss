@@ -71,3 +71,8 @@ search: false
     padding-inline-end: $right-sidebar-width-narrow !important;
   }
 }
+
+// Highlight the currently active sidebar menu item
+.nav__items .active {
+  color: $primary-color;
+}
