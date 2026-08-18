@@ -5,12 +5,8 @@ main:
 sidebar-ko:
   - title: "About me"
     url: /
-  - title: "발제문"
-    url: /discussion-papers/
 
 # English sidebar category list
 sidebar-en:
   - title: "About me"
     url: /en/
-  - title: "Discussion Paper"
-    url: /en/discussion-papers/

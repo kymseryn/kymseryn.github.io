@@ -36,3 +36,22 @@ search: false
     color: $masthead-link-color;
   }
 }
+
+// Always show the sidebar nav_list (no collapsed "Toggle menu" state)
+.nav__list {
+  label {
+    display: none !important;
+  }
+
+  input[type="checkbox"] {
+    display: none !important;
+  }
+
+  .nav__items {
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    margin-top: 1em;
+  }
+}
